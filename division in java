@@ -1,0 +1,17 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Division {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.print("enter the first number: ");
+        float a=s.nextInt();
+        System.out.print("enter the second number: ");
+        float b=s.nextInt();
+        float c=a/b;
+        System.out.println("Division of two number is: "+c);
+
+    }
+
+}
