@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class circle_Function {
+    public static float circumference(float r) {
+        System.out.println("area of circle is: " +2*3.14*r);
+
+return r;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        float r=s.nextFloat();
+        circumference(r);
+
+
+    }
+}
