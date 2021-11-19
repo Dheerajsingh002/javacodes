@@ -1,0 +1,16 @@
+package com.company;
+
+public class Array {
+    public  void sum(int...a) {
+        int sum=0;
+for (int x:a){
+    sum+=x;
+}
+        System.out.println(sum);
+}   public static void main(String[] args) {
+        Array obj=new Array();
+        obj.sum(10,20,30);
+obj.sum(12,13,14,15,16);
+obj.sum(10,20,30,40,50,60);
+}
+}
