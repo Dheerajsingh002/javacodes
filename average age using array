@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Practice6 {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int[] arr=new int[3];
+        int sum=0;
+        for(int i:arr){
+            System.out.println("enter the age: ");
+            arr[i]=s.nextInt();
+            sum=arr[i]+sum;
+        }
+        System.out.println("the average age  of three person is: "+sum/arr.length);
+    }
+
+}
