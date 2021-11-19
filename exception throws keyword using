@@ -1,0 +1,25 @@
+package com.company;
+
+public class Interrupted {
+    public static void m1() throws InterruptedException
+    {
+        m2();
+    }
+    public static void m2() throws InterruptedException
+    {
+        Thread.sleep(1000);
+    }
+
+    public static void main(String[] args) {
+        {
+            try{
+                m1();
+            }catch(InterruptedException obj){
+                obj.printStackTrace();
+                System.out.println(obj.toString());
+                System.out.println(obj.getMessage());
+            }
+        }
+    }
+
+}
