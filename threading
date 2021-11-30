@@ -1,0 +1,17 @@
+package com.company;
+
+ class Peson extends Thread{
+     public void run(){
+         for (int i=0;i<5;i++){
+             System.out.println(i);
+         }
+     }
+
+     public static void main(String[] args) {
+         Peson t=new Peson();
+         t.start();
+         for(int i=10;i<15;i++){
+             System.out.println(i);
+         }
+     }
+}
