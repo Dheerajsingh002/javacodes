@@ -1,0 +1,34 @@
+//Mr. Bean is very good in mathematics. He was given a number n and was told to find out number of trailing zeroes in n! (Factorial) . Can you help him?
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Trail {
+    public static void main(String[] args) {
+        int x,fact=1;
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the number");
+        x=s.nextInt();
+        int temp=x;
+        int z=0;
+        while(temp>0)
+        {
+            fact=fact*temp;
+            temp--;
+        }
+        while(fact>0)
+        {
+            if(fact%10==0)
+            {
+                z=z+1;
+            }
+            if(fact%10!=0)
+            {
+                break;
+            }
+            fact=fact/10;
+        }
+        System.out.println("Total no. of trailing zeroes in factorial of "+x+" are "+z);
+    }
+}
