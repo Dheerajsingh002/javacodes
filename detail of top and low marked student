@@ -1,0 +1,75 @@
+//Create an array of 10 students and print the record of those students who got the highest marks and who got minimum marks.
+
+package com.company;
+import java.util.*;
+public class Stu {
+    private int marks, rollno;
+    private String name;
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+    public int getRollno() {
+        return rollno;
+    }
+
+    public void setRollno(int rollno) {
+        this.rollno = rollno;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static void show(Stu[] arr) {
+        int max = 0, min = 0, j = 0, k = 0;
+        int omax, omin;
+        for (int i = 0; i < 10; i++) {
+            if (max < arr[i].marks) {
+                max = arr[i].marks;
+                j = i;
+            }
+            if (min > arr[i].marks) {
+                min = arr[i].marks;
+                k = i;
+            }
+        }
+        System.out.println("The record of the student who has highest marks among these students is:");
+        System.out.println(arr[j].getMarks());
+        System.out.println(arr[j].getName());
+        System.out.println(arr[j].getRollno());
+        System.out.println("The record of the student who has lowest marks among these students is:");
+        System.out.println(arr[k].getMarks());
+        System.out.println(arr[k].getName());
+        System.out.println(arr[k].getRollno());
+
+    }
+
+}
+    class Driver1{
+    public static void main(String[] args) {
+        Stu arr[]=new Stu[10];
+        Scanner s=new Scanner(System.in);
+        for(int i=0;i<10;i++)
+        {
+            int j=i+1;
+            arr[i]=new Stu();
+            System.out.println("Enter the marks of student no. "+j);
+            arr[i].setMarks(s.nextInt());
+            System.out.println("Enter the name of student no. "+j);
+            arr[i].setName(s.next());
+            System.out.println("Enter the rollno of student no. "+j);
+            arr[i].setRollno(s.nextInt());
+        }
+        Stu.show(arr);
+    }
+}
